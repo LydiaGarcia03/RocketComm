@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtRocketName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="130dp"
         android:ems="10"
+        android:hint="Nome do foguete"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="180dp"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCreationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Data de criação"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@id/txtRocketName"
+        app:layout_constraintTop_toBottomOf="@id/txtRocketName" />
+
+    <EditText
+        android:id="@+id/txtRocketHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Altura do foguete"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@id/txtCreationDate"
+        app:layout_constraintTop_toBottomOf="@id/txtCreationDate" />
+
+    <EditText
+        android:id="@+id/txtWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Peso do foguete"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@id/txtRocketHeight"
+        app:layout_constraintTop_toBottomOf="@id/txtRocketHeight" />
+
+    <EditText
+        android:id="@+id/txtStages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Estágios do foguete"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@id/txtWeight"
+        app:layout_constraintTop_toBottomOf="@id/txtWeight" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtRocketDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@id/txtStages"
+        app:layout_constraintTop_toBottomOf="@id/txtStages">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:hint="Descrição do foguete" />
+    </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

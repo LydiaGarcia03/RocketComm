@@ -18,13 +18,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void redirectToRocket(View view){
 
-        i = new Intent(this, RocketListActivity.class);
+        i = new Intent(this, RocketRegisterActivity.class);
+        startActivity(i);
 
     }
 
     public void redirectToLaunch(View view) {
 
-        i = new Intent(this, RocketListActivity.class);
+        i = new Intent(this, RocketRegisterActivity.class);
         startActivity(i);
 
     }

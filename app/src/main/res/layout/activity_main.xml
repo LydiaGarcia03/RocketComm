@@ -4,15 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/btn_rocket"
+        android:layout_width="146dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="33dp"
+        android:fontFamily="monospace"
+        android:paddingStart="15px"
+        android:paddingLeft="15px"
+        android:paddingTop="15px"
+        android:paddingEnd="15px"
+        android:paddingRight="15px"
+        android:paddingBottom="15px"
+        android:text="Foguetes"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_launch"
+        android:layout_width="146dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="224dp"
+        android:fontFamily="monospace"
+        android:paddingLeft="15px"
+        android:paddingTop="15px"
+        android:paddingEnd="15px"
+        android:paddingRight="15px"
+        android:paddingBottom="15px"
+        android:text="Lançamentos"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>

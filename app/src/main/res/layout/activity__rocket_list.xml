@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/white"
-    tools:context=".Activity_Rocket">
+    tools:context=".RocketListActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

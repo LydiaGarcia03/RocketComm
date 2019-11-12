@@ -9,6 +9,6 @@ public class RocketListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__rocket);
+        setContentView(R.layout.activity__rocket_list);
     }
 }

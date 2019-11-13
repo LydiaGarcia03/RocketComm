@@ -33,6 +33,7 @@
         android:layout_marginStart="224dp"
         android:fontFamily="monospace"
 
+        android:onClick="redirectToLaunch"
         android:paddingLeft="15px"
         android:paddingTop="15px"
         android:paddingEnd="15px"

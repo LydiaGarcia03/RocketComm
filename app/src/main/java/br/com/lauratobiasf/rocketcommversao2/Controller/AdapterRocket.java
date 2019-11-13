@@ -7,10 +7,20 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
+import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 
 public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHolder>
 {
+    private List<Rocket> rocketList;
+
+    public AdapterRocket(List<Rocket> rocketList)
+    {
+        this.rocketList = rocketList;
+    }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -21,12 +31,14 @@ public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHold
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position)
     {
-        holder.rocket_name.setText("Nome de teste"); //Aqui pegaria do banco de dados
+        Rocket rocket = rocketList.get(position);
+        holder.rocket_name.setText(rocket.getRocket_name());
     }
 
     @Override
-    public int getItemCount() {
-        return 10;
+    public int getItemCount()
+    {
+        return rocketList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder

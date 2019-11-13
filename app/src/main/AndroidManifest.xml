@@ -15,6 +15,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Controller.RocketRegister"></activity>
         <activity android:name=".Controller.RocketListActivity"></activity>
+        <activity android:name=".Controller.AdapterRocket"></activity>
         <activity android:name=".Controller.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

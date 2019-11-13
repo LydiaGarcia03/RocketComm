@@ -7,7 +7,7 @@ public class LaunchDAO {
 
     SQLiteDatabase db;
 
-    public LaunchDAO(Context c) {
+    public void createTable(Context c) {
 
         db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE, null);
 

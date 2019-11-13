@@ -6,17 +6,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import java.util.List;
+
+import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 
 public class RocketListActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private List<Rocket> rocketList;
+
+    RocketDAO _dal = new RocketDAO();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         recyclerView = findViewById(R.id.rocket_list);
+
+        //Listagem de Foguetes
+
+        rocketList = _dal.getRockets();
 
         //Configurar Adapter
 

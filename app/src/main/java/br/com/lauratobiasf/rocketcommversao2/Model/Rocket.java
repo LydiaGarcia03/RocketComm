@@ -1,5 +1,7 @@
 package br.com.lauratobiasf.rocketcommversao2.Model;
 
+import br.com.lauratobiasf.rocketcommversao2.R;
+
 public class Rocket {
 
     int id;
@@ -18,6 +20,12 @@ public class Rocket {
         this.rocket_weight = rocket_weight;
         this.stages = stages;
         this.rocket_description = rocket_description;
+    }
+
+    public Rocket(int id, String name)
+    {
+        this.id = id;
+        this.rocket_name = name;
     }
 
     public int getId() {

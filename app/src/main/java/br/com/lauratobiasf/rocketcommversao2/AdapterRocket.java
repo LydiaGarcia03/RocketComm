@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHolder>
 {
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.adpter_rocket_list, parent, false);
         return new MyViewHolder(listItem);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position)
+    public void onBindViewHolder(MyViewHolder holder, int position)
     {
         holder.rocket_name.setText("Nome de teste"); //Aqui pegaria do banco de dados
     }

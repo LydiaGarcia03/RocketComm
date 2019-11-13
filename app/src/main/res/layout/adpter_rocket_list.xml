@@ -16,5 +16,5 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:text="Rocket Name"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 </LinearLayout>

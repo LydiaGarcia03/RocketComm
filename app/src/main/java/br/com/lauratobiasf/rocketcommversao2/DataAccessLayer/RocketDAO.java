@@ -12,9 +12,13 @@ public class RocketDAO {
 
     SQLiteDatabase db;
 
+    public void initDatabase(Context c){
+        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
+    }
+
     public void createTable(Context c){
 
-        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
+        initDatabase(c);
 
         db.execSQL("CREATE TABLE IF NOT EXISTS rockets(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -59,7 +63,7 @@ public class RocketDAO {
 
     public void insertRockets(Context c, String rocketname, String creationdate, Float height, Float weight, Integer stages, String desc){
 
-        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
+        initDatabase(c);
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("rocket_name", rocketname);
@@ -70,6 +74,14 @@ public class RocketDAO {
         contentValues.put("rocket_description", desc);
 
         db.insert("rockets", null, contentValues);
+
+    }
+
+    public void deleteRocket(Context c, Integer id){
+
+        initDatabase(c);
+
+        db.delete("rocket", "id=?" + id, null);
 
     }
 }

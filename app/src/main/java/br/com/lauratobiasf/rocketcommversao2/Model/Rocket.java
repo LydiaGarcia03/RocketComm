@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.Model;
 
 public class Rocket {
 

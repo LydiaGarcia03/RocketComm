@@ -1,5 +1,6 @@
 package br.com.lauratobiasf.rocketcommversao2;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,7 +12,7 @@ public class RocketDAO {
 
     SQLiteDatabase db;
 
-    public RocketDAO(Context c) {
+    public void createTable(Context c){
 
         db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
 
@@ -23,6 +24,7 @@ public class RocketDAO {
                 "rocket_weight REAL," +
                 "stages INTEGER," +
                 "rocket_desc TEXT);");
+
     }
 
     public ArrayList<Rocket> getRockets(){
@@ -52,6 +54,22 @@ public class RocketDAO {
         }
 
         return rocketArrayList;
+
+    }
+
+    public void insertRockets(Context c, String rocketname, String creationdate, Float height, Float weight, Integer stages, String desc){
+
+        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("rocket_name", rocketname);
+        contentValues.put("creation_date", creationdate);
+        contentValues.put("rocket_height", height);
+        contentValues.put("rocket_weight", weight);
+        contentValues.put("stages", stages);
+        contentValues.put("rocket_description", desc);
+
+        db.insert("rockets", null, contentValues);
 
     }
 }

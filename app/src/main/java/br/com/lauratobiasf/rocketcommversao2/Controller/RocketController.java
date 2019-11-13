@@ -1,10 +1,9 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.Controller;
 
 import android.content.Context;
-
 import java.util.ArrayList;
-
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
+import br.com.lauratobiasf.rocketcommversao2.RocketDAO;
 
 public class RocketController {
 
@@ -14,7 +13,7 @@ public class RocketController {
     public RocketController(Context c) {
 
         cContext = c;
-        rocketDAO = new RocketDAO(cContext);
+        rocketDAO = new RocketDAO();
 
     }
 

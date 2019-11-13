@@ -5,8 +5,9 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.widget.Toast;
 import java.util.Set;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Bluetooth {
+public class Bluetooth extends AppCompatActivity {
 
     final BluetoothAdapter btAdapter;
     Set<BluetoothDevice> pairedDevices;
@@ -23,8 +24,13 @@ public class Bluetooth {
 
         if(!btAdapter.isEnabled()){
             Intent enableBT = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBT, 0);
+            Toast.makeText(getApplicationContext(), "Bluetooth ligado",Toast.LENGTH_LONG).show();
+        } else{
+            Toast.makeText(getApplicationContext(), "Bluetooth já estava ligado", Toast.LENGTH_LONG).show();
         }
 
+        visible();
         findDevice();
     }
 
@@ -41,7 +47,16 @@ public class Bluetooth {
                 }
             }
         }
+    }
 
+    public void turnoff(){
+        btAdapter.disable();
+        Toast.makeText(getApplicationContext(), "Desligado" ,Toast.LENGTH_LONG).show();
+    }
+
+    public void visible(){
+        Intent getVisible = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+        startActivityForResult(getVisible, 0);
     }
 
 }

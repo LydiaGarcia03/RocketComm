@@ -1,11 +1,10 @@
 package br.com.lauratobiasf.rocketcommversao2;
 
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import br.com.lauratobiasf.rocketcommversao2.R;
+import android.os.Bundle;
 
-public class RocketRegisterActivity extends AppCompatActivity {
+public class RocketRegister extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

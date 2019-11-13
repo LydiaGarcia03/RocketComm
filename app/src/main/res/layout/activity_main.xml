@@ -13,7 +13,6 @@
         android:layout_height="134dp"
         android:layout_marginStart="33dp"
         android:fontFamily="monospace"
-        android:onClick="redirectToRocket"
         android:paddingStart="15px"
         android:paddingLeft="15px"
         android:paddingTop="15px"
@@ -22,6 +21,7 @@
         android:paddingBottom="15px"
         android:text="Foguetes"
         android:textSize="18sp"
+        android:onClick="redirectToRocket"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +32,7 @@
         android:layout_height="134dp"
         android:layout_marginStart="224dp"
         android:fontFamily="monospace"
-        android:onClick="redirectToLaunch"
+
         android:paddingLeft="15px"
         android:paddingTop="15px"
         android:paddingEnd="15px"

@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.Resources;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

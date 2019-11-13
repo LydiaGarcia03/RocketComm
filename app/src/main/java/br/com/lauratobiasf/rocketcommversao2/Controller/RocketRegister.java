@@ -1,8 +1,11 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.Controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
+
+import br.com.lauratobiasf.rocketcommversao2.R;
+import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
 
 public class RocketRegister extends AppCompatActivity {
 

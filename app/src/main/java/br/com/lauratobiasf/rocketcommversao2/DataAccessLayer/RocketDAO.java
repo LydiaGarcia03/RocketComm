@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.DataAccessLayer;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -3,7 +3,7 @@ package br.com.lauratobiasf.rocketcommversao2.Controller;
 import android.content.Context;
 import java.util.ArrayList;
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
-import br.com.lauratobiasf.rocketcommversao2.RocketDAO;
+import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
 
 public class RocketController {
 

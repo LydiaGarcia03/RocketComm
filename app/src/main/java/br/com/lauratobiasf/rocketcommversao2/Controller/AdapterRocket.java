@@ -1,12 +1,13 @@
-package br.com.lauratobiasf.rocketcommversao2;
+package br.com.lauratobiasf.rocketcommversao2.Controller;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import br.com.lauratobiasf.rocketcommversao2.R;
 
 public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHolder>
 {

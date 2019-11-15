@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.Controller;
+package br.com.lauratobiasf.rocketcommversao2.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

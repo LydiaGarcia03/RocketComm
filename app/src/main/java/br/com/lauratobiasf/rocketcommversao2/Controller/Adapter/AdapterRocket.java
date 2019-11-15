@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.Controller;
+package br.com.lauratobiasf.rocketcommversao2.Controller.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +12,7 @@ import java.util.List;
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 
-public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHolder>
+public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.RocketViewHolder>
 {
     private List<Rocket> rocketList;
 
@@ -22,14 +22,14 @@ public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHold
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RocketViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.adpter_rocket_list, parent, false);
-        return new MyViewHolder(listItem);
+        View listItem = LayoutInflater.from(parent.getContext()).inflate(   R.layout.adapter_rocket_list, parent, false);
+        return new RocketViewHolder(listItem);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position)
+    public void onBindViewHolder(RocketViewHolder holder, int position)
     {
         Rocket rocket = rocketList.get(position);
         holder.rocket_name.setText(rocket.getRocket_name());
@@ -41,11 +41,11 @@ public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.MyViewHold
         return rocketList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder
+    public class RocketViewHolder extends RecyclerView.ViewHolder
     {
         TextView rocket_name;
 
-        public MyViewHolder(View itemView) {
+        public RocketViewHolder(View itemView) {
             super(itemView);
 
             rocket_name = itemView.findViewById(R.id.textName);

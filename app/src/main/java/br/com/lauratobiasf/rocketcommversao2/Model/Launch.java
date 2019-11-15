@@ -11,6 +11,10 @@ public class Launch {
     String recover_system;
     boolean altimeter;
 
+    public Launch(int id){
+        this.id = id;
+    }
+
     public Launch(int id, int fk_rocket_id, String launch_datetime, float launch_site_lat, float launch_site_lon, String motor_type, String recover_system, boolean altimeter) {
         this.id = id;
         this.fk_rocket_id = fk_rocket_id;

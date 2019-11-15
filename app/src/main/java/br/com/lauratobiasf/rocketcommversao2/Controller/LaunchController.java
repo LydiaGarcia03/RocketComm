@@ -1,7 +1,7 @@
 package br.com.lauratobiasf.rocketcommversao2.Controller;
 
 import android.content.Context;
-import br.com.lauratobiasf.rocketcommversao2.Resources.Bluetooth;
+import br.com.lauratobiasf.rocketcommversao2.Bluetooth.Bluetooth;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.LaunchDAO;
 
 public class LaunchController {

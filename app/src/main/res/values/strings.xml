@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">RocketCommVersao2</string>
+
+    <string name="rocket_prompt">Choose a country</string>
+
+    <string-array name="rocket_arrays">
+        <item>Escolha o foguete</item>
+    </string-array>
 </resources>

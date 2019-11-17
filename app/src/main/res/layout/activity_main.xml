@@ -21,7 +21,9 @@
         android:paddingBottom="15px"
         android:text="Foguetes"
         android:textSize="18sp"
+        android:background="@drawable/border_button_grey"
         android:onClick="redirectToRocket"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,6 +43,7 @@
         android:paddingBottom="15px"
         android:text="Lançamentos"
         android:textSize="18sp"
+        android:background="@drawable/border_button_grey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

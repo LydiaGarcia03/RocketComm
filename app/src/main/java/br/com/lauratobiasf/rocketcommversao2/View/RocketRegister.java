@@ -17,12 +17,7 @@ public class RocketRegister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rocket_register);
 
-        etRocketName = findViewById(R.id.txtRocketName);
-        etCreationDate = findViewById(R.id.txtCreationDate);
-        etRocketHeight = findViewById(R.id.txtRocketHeight);
-        etRocketWeight = findViewById(R.id.txtWeight);
-        etStages = findViewById(R.id.txtStages);
-        etRocketDesc = findViewById(R.id.txtRocketDesc);
+
 
     }
 

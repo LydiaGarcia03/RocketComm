@@ -16,19 +16,6 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Button btn_launch = findViewById(R.id.btn_launch);
-       // Button btn_rocket = findViewById(R.id.btn_rocket);
-
-       /* btn_launch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                i = new Intent(getApplicationContext(), LaunchList.class);
-                Home.this.startActivity(i);
-            }
-        });*/
-
-
     }
 
     public void redirectToRocket(View view){

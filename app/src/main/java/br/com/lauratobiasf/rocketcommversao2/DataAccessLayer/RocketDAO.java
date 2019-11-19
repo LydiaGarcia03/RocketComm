@@ -81,7 +81,7 @@ import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 
         initDatabase(c);
 
-        db.delete("rocket", "id=?" + id, null);
+        db.delete("rockets", "id=?" + id, null);
 
     }
 }

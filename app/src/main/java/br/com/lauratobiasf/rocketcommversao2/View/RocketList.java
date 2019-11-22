@@ -1,17 +1,13 @@
 package br.com.lauratobiasf.rocketcommversao2.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-
 import java.util.ArrayList;
-
 import br.com.lauratobiasf.rocketcommversao2.Controller.Adapter.AdapterRocket;
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;

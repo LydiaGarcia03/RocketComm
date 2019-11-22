@@ -4,6 +4,7 @@ public class Launch {
 
     int id;
     int fk_rocket_id;
+    String launch_name;
     String launch_datetime;
     float launch_site_lat;
     float launch_site_lon;
@@ -11,8 +12,8 @@ public class Launch {
     String recover_system;
     boolean altimeter;
 
-    public Launch(int id){
-        this.id = id;
+    public Launch(String name){
+        this.launch_name = name;
     }
 
     public Launch(int id, int fk_rocket_id, String launch_datetime, float launch_site_lat, float launch_site_lon, String motor_type, String recover_system, boolean altimeter) {
@@ -88,6 +89,14 @@ public class Launch {
 
     public void setAltimeter(boolean altimeter) {
         this.altimeter = altimeter;
+    }
+
+    public String getLaunch_name() {
+        return launch_name;
+    }
+
+    public void setLaunch_name(String launch_name) {
+        this.launch_name = launch_name;
     }
 }
 

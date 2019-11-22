@@ -32,7 +32,9 @@ public class AdapterLaunch extends RecyclerView.Adapter<AdapterLaunch.LaunchView
     public void onBindViewHolder(LaunchViewHolder holder, int position)
     {
         Launch launch = launchList.get(position);
-        holder.launchID.setText(launch.getId());
+        holder.launchID.setText(launch.getLaunch_name());
+
+        //        holder.rocket_name.setText(rocket.getRocket_name());
     }
 
     @Override
@@ -47,7 +49,7 @@ public class AdapterLaunch extends RecyclerView.Adapter<AdapterLaunch.LaunchView
         public LaunchViewHolder(View itemView) {
             super(itemView);
 
-            launchID = itemView.findViewById(R.id.textIDLaunch);
+            launchID = itemView.findViewById(R.id.textLaunchID);
         }
     }
 }

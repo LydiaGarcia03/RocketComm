@@ -8,17 +8,17 @@ import java.util.ArrayList;
 
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 
-        public class RocketDAO {
+public class RocketDAO {
 
-            SQLiteDatabase db;
+    SQLiteDatabase db;
 
-            public void initDatabase(Context c){
-                db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
-            }
+    public void initDatabase(Context c){
+        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
+    }
 
-            public void createTable(Context c){
+    public void createTable(Context c){
 
-                initDatabase(c);
+        initDatabase(c);
 
         db.execSQL("CREATE TABLE IF NOT EXISTS rockets(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -77,11 +77,12 @@ import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 
     }
 
-    public void deleteRocket(Context c, Integer id){
+    public void deleteRocket(Context c, Rocket rocket){
 
         initDatabase(c);
 
-        db.delete("rockets", "id=?" + id, null);
+        //db.delete("rockets", "id=?" + rocket.getId(), null);
+        db.execSQL("DELETE FROM rockets WHERE id = " + rocket.getId());
 
     }
 }

@@ -1,25 +1,56 @@
 package br.com.lauratobiasf.rocketcommversao2.DataAccessLayer;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
+import br.com.lauratobiasf.rocketcommversao2.Model.Launch;
 
 public class LaunchDAO {
 
     SQLiteDatabase db;
 
+    public void initTable(Context c){
+        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE, null);
+    }
+
     public void createTable(Context c) {
 
-        db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE, null);
+        initTable(c);
 
         db.execSQL("CREATE TABLE IF NOT EXISTS launches(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                 "fk_rocket_id INTEGER NOT NULL," +
                 "launch_datetime DATETIME NOT NULL," +
-                "launch_site_lon REAL," +
-                "launch_site_lat REAL," +
+                "launch_total_time REAL," +
                 "motor_type TEXT NOT NULL," +
-                "recover_system TEXT NOT NULL," +
+                "recover_system TEXT," +
                 "altimeter INT NOT NULL);");
 
     }
+
+    public void insertLaunch(Context c, int fk_rocket_id, float launch_total_time, String motor_type, String recover_system, boolean altimeter){
+
+        initTable(c);
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("launches", fk_rocket_id);
+        contentValues.put("launches", launch_total_time);
+        contentValues.put("launches", motor_type);
+        contentValues.put("launches", recover_system);
+        contentValues.put("launches", altimeter);
+
+        db.insert("launches", null, contentValues);
+
+    }
+
+    public void deleteLaunch(Context c, Launch launch){
+
+        initTable(c);
+
+        //db.delete("launches", "id=?" + launch.getId(), null);
+        db.execSQL("DELETE FROM launches WHERE id = " + launch.getId());
+
+    }
+
 }

@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View;
+package br.com.lauratobiasf.rocketcommversao2.View.Rocket;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,14 +22,14 @@ public class RocketRegister extends AppCompatActivity {
 
 
 
-        btnRegister = findViewById(R.id.btnRocketRegister);
+      //  btnRegister = findViewById(R.id.btnRocketRegister);
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                register();
-            }
-        });
+//        btnRegister.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                register();
+//            }
+//        });
 
     }
 

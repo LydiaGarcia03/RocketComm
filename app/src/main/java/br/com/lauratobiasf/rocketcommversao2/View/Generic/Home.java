@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View;
+package br.com.lauratobiasf.rocketcommversao2.View.Generic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import br.com.lauratobiasf.rocketcommversao2.R;
+import br.com.lauratobiasf.rocketcommversao2.View.Launch.LaunchList;
+import br.com.lauratobiasf.rocketcommversao2.View.Rocket.RocketList;
 
 public class Home extends AppCompatActivity {
 

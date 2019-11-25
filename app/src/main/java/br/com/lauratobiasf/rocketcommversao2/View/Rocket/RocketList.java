@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View;
+package br.com.lauratobiasf.rocketcommversao2.View.Rocket;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,12 +6,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import br.com.lauratobiasf.rocketcommversao2.Controller.Adapter.AdapterRocket;
 import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
+import br.com.lauratobiasf.rocketcommversao2.View.Generic.RecyclerItemClickListener;
 
 public class RocketList extends AppCompatActivity {
 
@@ -50,11 +54,51 @@ public class RocketList extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recyclerView.setAdapter(adapter);
+
+        //Configurar Evento de Click
+
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(
+                        getApplicationContext(),
+                        recyclerView,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                Toast.makeText(
+                                        RocketList.this,
+                                        "Clicado",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position)
+                            {
+                                Toast.makeText(
+                                        RocketList.this,
+                                        "Clicando",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            }
+                        }
+                )
+        );
+
     }
 
     public void redirectToRocketRegister(View view) {
 
         i = new Intent(this, RocketRegister.class);
+        startActivity(i);
+
+    }
+
+    public void redirectToRocketDetails(View view) {
+
+        i = new Intent(this, RocketDetails.class);
         startActivity(i);
 
     }

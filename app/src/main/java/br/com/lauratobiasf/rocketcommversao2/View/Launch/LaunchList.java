@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View;
+package br.com.lauratobiasf.rocketcommversao2.View.Launch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -6,12 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import java.util.ArrayList;
 import br.com.lauratobiasf.rocketcommversao2.Controller.Adapter.AdapterLaunch;
 import br.com.lauratobiasf.rocketcommversao2.Model.Launch;
 import br.com.lauratobiasf.rocketcommversao2.R;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.LaunchDAO;
+import br.com.lauratobiasf.rocketcommversao2.View.Generic.RecyclerItemClickListener;
+import br.com.lauratobiasf.rocketcommversao2.View.Rocket.RocketRegister;
 
 public class LaunchList extends AppCompatActivity
 {
@@ -52,11 +55,36 @@ public class LaunchList extends AppCompatActivity
         recycler.setHasFixedSize(true);
         recycler.addItemDecoration(new DividerItemDecoration(this, LinearLayout.VERTICAL));
         recycler.setAdapter(adapterLaunch);
+
+        //Configurar Evento de Click
+
+        recycler.addOnItemTouchListener(
+                new RecyclerItemClickListener(
+                        getApplicationContext(),
+                        recycler,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            }
+                        }
+                )
+        );
     }
 
     public void redirectToLaunchRegister(View view) {
 
-        intent = new Intent(this, RocketRegister.class);
+        intent = new Intent(this, LaunchRegister.class);
         startActivity(intent);
 
     }

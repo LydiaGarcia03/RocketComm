@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 
-import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Rocket;
 
 public class RocketDAO {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/white"
-    tools:context=".View.Rocket.RocketList">
+    tools:context=".PresentationLayer.Rocket.RocketList">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rocket_recycler"

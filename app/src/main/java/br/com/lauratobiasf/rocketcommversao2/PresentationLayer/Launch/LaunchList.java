@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View.Launch;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Launch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,12 +9,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import java.util.ArrayList;
-import br.com.lauratobiasf.rocketcommversao2.Controller.Adapter.AdapterLaunch;
-import br.com.lauratobiasf.rocketcommversao2.Model.Launch;
+
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Launch;
 import br.com.lauratobiasf.rocketcommversao2.R;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.LaunchDAO;
-import br.com.lauratobiasf.rocketcommversao2.View.Generic.RecyclerItemClickListener;
-import br.com.lauratobiasf.rocketcommversao2.View.Rocket.RocketRegister;
+import br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Generic.RecyclerItemClickListener;
 
 public class LaunchList extends AppCompatActivity
 {

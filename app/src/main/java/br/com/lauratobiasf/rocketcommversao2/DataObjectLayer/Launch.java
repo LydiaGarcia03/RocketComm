@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.Model;
+package br.com.lauratobiasf.rocketcommversao2.DataObjectLayer;
 
 public class Launch {
 

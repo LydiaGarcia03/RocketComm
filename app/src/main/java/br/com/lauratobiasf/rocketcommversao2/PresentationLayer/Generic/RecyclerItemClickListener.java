@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View.Generic;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Generic;
 import androidx.recyclerview.widget.RecyclerView;
 
 

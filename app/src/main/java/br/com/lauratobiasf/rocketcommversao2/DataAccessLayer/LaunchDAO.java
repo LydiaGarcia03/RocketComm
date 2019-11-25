@@ -4,7 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import br.com.lauratobiasf.rocketcommversao2.Model.Launch;
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Launch;
 
 public class LaunchDAO {
 

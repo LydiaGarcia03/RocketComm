@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.Controller.Adapter;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Rocket;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 
 public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.RocketViewHolder>
@@ -39,6 +39,11 @@ public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.RocketView
     public int getItemCount()
     {
         return rocketList.size();
+    }
+
+    public Rocket getRocket(int position)
+    {
+        return rocketList.get(position);
     }
 
     public class RocketViewHolder extends RecyclerView.ViewHolder

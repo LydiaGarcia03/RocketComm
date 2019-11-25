@@ -14,14 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Rocket.RocketRegister"></activity>
-        <activity android:name=".View.Rocket.RocketList"></activity>
-        <activity android:name=".View.Rocket.RocketDetails"></activity>
-        <activity android:name=".View.Launch.LaunchList"></activity>
-        <activity android:name=".View.Launch.LaunchRegister"></activity>
-        <activity android:name=".Controller.Adapter.AdapterRocket"></activity>
-        <activity android:name=".Controller.Adapter.AdapterLaunch"></activity>
-        <activity android:name=".View.Generic.Home">
+        <activity android:name=".PresentationLayer.Rocket.RocketRegister"></activity>
+        <activity android:name=".PresentationLayer.Rocket.RocketList"></activity>
+        <activity android:name=".PresentationLayer.Rocket.RocketDetails"></activity>
+        <activity android:name=".PresentationLayer.Launch.LaunchList"></activity>
+        <activity android:name=".PresentationLayer.Launch.LaunchRegister"></activity>
+        <activity android:name=".PresentationLayer.Rocket.AdapterRocket"></activity>
+        <activity android:name=".PresentationLayer.Launch.AdapterLaunch"></activity>
+        <activity android:name=".PresentationLayer.Generic.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".View.Chart"
+            android:name=".PresentationLayer.Generic.Chart"
             android:label="@string/app_name" >
         </activity>
     </application>

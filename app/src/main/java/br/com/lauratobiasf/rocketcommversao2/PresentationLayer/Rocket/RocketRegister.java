@@ -1,8 +1,7 @@
-package br.com.lauratobiasf.rocketcommversao2.View.Rocket;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Rocket;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 

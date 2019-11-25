@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.Controller.Adapter;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Launch;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import br.com.lauratobiasf.rocketcommversao2.Model.Launch;
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Launch;
 import br.com.lauratobiasf.rocketcommversao2.R;
 
 public class AdapterLaunch extends RecyclerView.Adapter<AdapterLaunch.LaunchViewHolder>

@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Generic;
 
 import androidx.appcompat.app.AppCompatActivity;
 import br.com.lauratobiasf.rocketcommversao2.R;

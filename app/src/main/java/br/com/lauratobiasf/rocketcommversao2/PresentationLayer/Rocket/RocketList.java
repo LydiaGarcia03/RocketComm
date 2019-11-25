@@ -1,4 +1,4 @@
-package br.com.lauratobiasf.rocketcommversao2.View.Rocket;
+package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Rocket;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,14 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import br.com.lauratobiasf.rocketcommversao2.Controller.Adapter.AdapterRocket;
-import br.com.lauratobiasf.rocketcommversao2.Model.Rocket;
+
+import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Rocket;
 import br.com.lauratobiasf.rocketcommversao2.R;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
-import br.com.lauratobiasf.rocketcommversao2.View.Generic.RecyclerItemClickListener;
+import br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Generic.RecyclerItemClickListener;
 
 public class RocketList extends AppCompatActivity {
 
@@ -45,7 +44,7 @@ public class RocketList extends AppCompatActivity {
 
         //Configurar Adapter
 
-        AdapterRocket adapter = new AdapterRocket(rocketList);
+        final AdapterRocket adapter = new AdapterRocket(rocketList);
 
         //Configurar RecyclerView
 
@@ -64,19 +63,18 @@ public class RocketList extends AppCompatActivity {
                         new RecyclerItemClickListener.OnItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
-                                Toast.makeText(
-                                        RocketList.this,
-                                        "Clicado",
-                                        Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getApplicationContext(), RocketDetails.class);
+
+                                Rocket rocket = adapter.getRocket(position);
+                                i.putExtra("rocket", rocket);
+
+                                startActivity(i);
+
                             }
 
                             @Override
                             public void onLongItemClick(View view, int position)
                             {
-                                Toast.makeText(
-                                        RocketList.this,
-                                        "Clicando",
-                                        Toast.LENGTH_SHORT).show();
                             }
 
                             @Override

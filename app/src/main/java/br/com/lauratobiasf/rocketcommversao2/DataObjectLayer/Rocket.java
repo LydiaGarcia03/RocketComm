@@ -1,6 +1,8 @@
-package br.com.lauratobiasf.rocketcommversao2.Model;
+package br.com.lauratobiasf.rocketcommversao2.DataObjectLayer;
 
-public class Rocket {
+import java.io.Serializable;
+
+public class Rocket implements Serializable {
 
     int id;
     String rocket_name;

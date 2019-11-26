@@ -18,8 +18,9 @@ import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
 public class RocketRegister extends AppCompatActivity {
 
     EditText etRocketName, etCreationDate, etRocketHeight, etRocketWeight, etStages, etRocketDesc;
-    RocketDAO rocketDAO;
     FloatingActionButton btnRegister;
+
+    RocketDAO rocketDAO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

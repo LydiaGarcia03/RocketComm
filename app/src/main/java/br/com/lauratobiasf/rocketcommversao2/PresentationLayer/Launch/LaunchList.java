@@ -19,10 +19,9 @@ public class LaunchList extends AppCompatActivity
 {
     private RecyclerView recycler;
     private ArrayList<Launch> launchList = new ArrayList<Launch>();
-    Intent intent;
+    Intent i;
 
     LaunchDAO _dal;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,20 +33,20 @@ public class LaunchList extends AppCompatActivity
 
         //Listagem de Lançamentos
 
-        //launchList = _dal.getLaunches();
+        launchList = _dal.getLaunches();
 
-        launchList.add(new Launch("Lançamento 01"));
-        launchList.add(new Launch("Lançamento 02"));
-        launchList.add(new Launch("Lançamento 03"));
-        launchList.add(new Launch("Lançamento 04"));
-        launchList.add(new Launch("Lançamento 05"));
-        launchList.add(new Launch("Lançamento 06"));
-        launchList.add(new Launch("Lançamento 07"));
-        launchList.add(new Launch("Lançamento 08"));
+//        launchList.add(new Launch("Lançamento 01"));
+//        launchList.add(new Launch("Lançamento 02"));
+//        launchList.add(new Launch("Lançamento 03"));
+//        launchList.add(new Launch("Lançamento 04"));
+//        launchList.add(new Launch("Lançamento 05"));
+//        launchList.add(new Launch("Lançamento 06"));
+//        launchList.add(new Launch("Lançamento 07"));
+//        launchList.add(new Launch("Lançamento 08"));
 
         //Configurar Adapter
 
-        AdapterLaunch adapterLaunch = new AdapterLaunch(launchList);
+        final AdapterLaunch adapterLaunch = new AdapterLaunch(launchList);
 
         //Configurar RecyclerView
 
@@ -66,7 +65,12 @@ public class LaunchList extends AppCompatActivity
                         new RecyclerItemClickListener.OnItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
+                                Intent i = new Intent(getApplicationContext(), LaunchDetails.class);
 
+                                Launch launch = adapterLaunch.getLaunch(position);
+                                i.putExtra("launch", launch.getId());
+
+                                startActivity(i);
                             }
 
                             @Override
@@ -85,8 +89,8 @@ public class LaunchList extends AppCompatActivity
 
     public void redirectToLaunchRegister(View view) {
 
-        intent = new Intent(this, LaunchRegister.class);
-        startActivity(intent);
+        i = new Intent(this, LaunchRegister.class);
+        startActivity(i);
 
     }
 }

@@ -3,25 +3,27 @@ package br.com.lauratobiasf.rocketcommversao2.DataObjectLayer;
 public class Launch {
 
     int id;
-    int fk_rocket_id;
-    String launch_name;
+    String rocket_name;
+    String total_time_launch;
     String launch_datetime;
-    float launch_site_lat;
-    float launch_site_lon;
     String motor_type;
     String recover_system;
-    boolean altimeter;
+    int altimeter;
 
-    public Launch(String name){
-        this.launch_name = name;
+    public Launch(int id, String rocket_name, String total_time_launch, String launch_datetime, String motor_type, String recover_system, int altimeter) {
+        this.id = id;
+        this.rocket_name = rocket_name;
+        this.total_time_launch = total_time_launch;
+        this.launch_datetime = launch_datetime;
+        this.motor_type = motor_type;
+        this.recover_system = recover_system;
+        this.altimeter = altimeter;
     }
 
-    public Launch(int id, int fk_rocket_id, String launch_datetime, float launch_site_lat, float launch_site_lon, String motor_type, String recover_system, boolean altimeter) {
-        this.id = id;
-        this.fk_rocket_id = fk_rocket_id;
+    public Launch(String rocket_name, String total_time_launch, String launch_datetime, String motor_type, String recover_system, int altimeter) {
+        this.rocket_name = rocket_name;
+        this.total_time_launch = total_time_launch;
         this.launch_datetime = launch_datetime;
-        this.launch_site_lat = launch_site_lat;
-        this.launch_site_lon = launch_site_lon;
         this.motor_type = motor_type;
         this.recover_system = recover_system;
         this.altimeter = altimeter;
@@ -35,37 +37,19 @@ public class Launch {
         this.id = id;
     }
 
-    public int getFk_rocket_id() {
-        return fk_rocket_id;
-    }
+    public String getRocket_name() { return rocket_name; }
 
-    public void setFk_rocket_id(int fk_rocket_id) {
-        this.fk_rocket_id = fk_rocket_id;
-    }
+    public void setRocket_name(String rocket_name) { this.rocket_name = rocket_name; }
+
+    public String getTotal_time_launch() { return total_time_launch; }
+
+    public void setTotal_time_launch(String total_time_launch) { this.total_time_launch = total_time_launch; }
 
     public String getLaunch_datetime() {
         return launch_datetime;
     }
 
-    public void setLaunch_datetime(String launch_datetime) {
-        this.launch_datetime = launch_datetime;
-    }
-
-    public float getLaunch_site_lat() {
-        return launch_site_lat;
-    }
-
-    public void setLaunch_site_lat(float launch_site_lat) {
-        this.launch_site_lat = launch_site_lat;
-    }
-
-    public float getLaunch_site_lon() {
-        return launch_site_lon;
-    }
-
-    public void setLaunch_site_lon(float launch_site_lon) {
-        this.launch_site_lon = launch_site_lon;
-    }
+    public void setLaunch_datetime(String launch_datetime) { this.launch_datetime = launch_datetime; }
 
     public String getMotor_type() {
         return motor_type;
@@ -83,20 +67,13 @@ public class Launch {
         this.recover_system = recover_system;
     }
 
-    public boolean isAltimeter() {
+    public int isAltimeter() {
         return altimeter;
     }
 
-    public void setAltimeter(boolean altimeter) {
+    public void setAltimeter(int altimeter) {
         this.altimeter = altimeter;
     }
 
-    public String getLaunch_name() {
-        return launch_name;
-    }
-
-    public void setLaunch_name(String launch_name) {
-        this.launch_name = launch_name;
-    }
 }
 

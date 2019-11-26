@@ -32,14 +32,17 @@ public class AdapterLaunch extends RecyclerView.Adapter<AdapterLaunch.LaunchView
     public void onBindViewHolder(LaunchViewHolder holder, int position)
     {
         Launch launch = launchList.get(position);
-        holder.launchID.setText(launch.getLaunch_name());
-
-        //        holder.rocket_name.setText(rocket.getRocket_name());
+        holder.launchID.setText(launch.getId());
     }
 
     @Override
     public int getItemCount() {
         return launchList.size();
+    }
+
+    public Launch getLaunch(int position)
+    {
+        return launchList.get(position);
     }
 
     public class LaunchViewHolder extends RecyclerView.ViewHolder

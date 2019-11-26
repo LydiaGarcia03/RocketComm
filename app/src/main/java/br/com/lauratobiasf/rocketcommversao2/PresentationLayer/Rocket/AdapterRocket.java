@@ -24,7 +24,7 @@ public class AdapterRocket extends RecyclerView.Adapter<AdapterRocket.RocketView
     @Override
     public RocketViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View listItem = LayoutInflater.from(parent.getContext()).inflate(   R.layout.adapter_rocket_list, parent, false);
+        View listItem = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_rocket_list, parent, false);
         return new RocketViewHolder(listItem);
     }
 

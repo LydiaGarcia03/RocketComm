@@ -32,15 +32,15 @@ public class RocketList extends AppCompatActivity {
 
         //Listagem de Foguetes
 
-        //rocketList = _dal.getRockets();
-        rocketList.add(new Rocket(1, "Foguete 00"));
-        rocketList.add(new Rocket(2, "Foguete 01"));
-        rocketList.add(new Rocket(3, "Foguete 02"));
-        rocketList.add(new Rocket(4, "Foguete 03"));
-        rocketList.add(new Rocket(5, "Foguete 04"));
-        rocketList.add(new Rocket(6, "Foguete 05"));
-        rocketList.add(new Rocket(7, "Foguete 06"));
-        rocketList.add(new Rocket(8, "Foguete 07"));
+        rocketList = _dal.getRockets();
+//        rocketList.add(new Rocket(1, "Foguete 00"));
+//        rocketList.add(new Rocket(2, "Foguete 01"));
+//        rocketList.add(new Rocket(3, "Foguete 02"));
+//        rocketList.add(new Rocket(4, "Foguete 03"));
+//        rocketList.add(new Rocket(5, "Foguete 04"));
+//        rocketList.add(new Rocket(6, "Foguete 05"));
+//        rocketList.add(new Rocket(7, "Foguete 06"));
+//        rocketList.add(new Rocket(8, "Foguete 07"));
 
         //Configurar Adapter
 

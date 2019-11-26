@@ -53,6 +53,10 @@ public class RocketDAO {
             stages = cursor.getInt(cursor.getColumnIndex("stages"));
             rocket_description = cursor.getString(cursor.getColumnIndex("rocket_desc"));
 
+            Rocket rocket = new Rocket(id, rocket_name, creation_date, rocket_height, rocket_weight, stages, rocket_description);
+
+            rocketArrayList.add(rocket);
+
             cursor.moveToNext();
 
         }

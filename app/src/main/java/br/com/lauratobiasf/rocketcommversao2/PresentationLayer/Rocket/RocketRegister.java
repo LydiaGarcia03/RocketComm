@@ -2,8 +2,12 @@ package br.com.lauratobiasf.rocketcommversao2.PresentationLayer.Rocket;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import br.com.lauratobiasf.rocketcommversao2.R;
 import br.com.lauratobiasf.rocketcommversao2.DataAccessLayer.RocketDAO;
@@ -12,24 +16,22 @@ public class RocketRegister extends AppCompatActivity {
 
     EditText etRocketName, etCreationDate, etRocketHeight, etRocketWeight, etStages, etRocketDesc;
     RocketDAO rocketDAO;
-    Button btnRegister;
+    FloatingActionButton btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rocket_register);
 
+        btnRegister = (FloatingActionButton) findViewById(R.id.btnRocketRegister);
 
-
-      //  btnRegister = findViewById(R.id.btnRocketRegister);
-
-//        btnRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                register();
-//            }
-//        });
-
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                register();
+                Toast.makeText(getApplicationContext(), "Foguete cadastrado", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     public void register(){

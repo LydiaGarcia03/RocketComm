@@ -8,7 +8,7 @@ import br.com.lauratobiasf.rocketcommversao2.DataObjectLayer.Launch;
 
 public class LaunchDAO {
 
-    SQLiteDatabase db;
+    public SQLiteDatabase db;
 
     public void initTable(Context c){
         db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE, null);

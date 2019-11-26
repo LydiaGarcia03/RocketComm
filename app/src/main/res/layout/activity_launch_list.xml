@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnLaunchRegister"
+        android:id="@+id/btnLaunchRegisterRedirect"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:layout_marginEnd="16dp"

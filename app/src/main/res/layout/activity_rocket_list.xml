@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnRocketRegister"
+        android:id="@+id/btnRocketRegisterRedirect"
         android:layout_width="80dp"
         android:layout_height="85dp"
         android:layout_marginEnd="16dp"

@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/etRocketName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -30,8 +30,8 @@
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Nome do foguete"
             android:inputType="textPersonName"
-            android:text="Nome do foguete"
             android:textSize="24sp" />
 
         <LinearLayout
@@ -41,64 +41,64 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/etHeight"
                 android:layout_width="173dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:ems="10"
+                android:hint="Altura (cm)"
                 android:inputType="textPersonName"
-                android:text="Altura (cm)"
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/etWeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="Peso (kg)"
                 android:inputType="textPersonName"
-                android:text="Peso (kg)"
                 android:textSize="24sp" />
         </LinearLayout>
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/etStages"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Número de estágios"
             android:inputType="textPersonName"
-            android:text="Estágio"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/etCreationDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Data de criação"
             android:inputType="date"
-            android:text="00/00/00"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="245dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Descrição"
             android:inputType="textMultiLine|textPersonName|textImeMultiLine"
-            android:text="Descrição"
             android:textSize="24sp" />
 
     </LinearLayout>

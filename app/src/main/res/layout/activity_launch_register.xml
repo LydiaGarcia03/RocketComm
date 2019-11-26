@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Spinner
-            android:id="@+id/spinnerRocket"
+            android:id="@+id/spRockets"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginLeft="16dp"
@@ -41,31 +41,31 @@
             tools:visibility="visible" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/etMotorType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Tipo do motor"
             android:inputType="textPersonName"
-            android:text="Motor"
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/etRecoverSystem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:ems="10"
+            android:hint="Sistema de recuperação"
             android:inputType="textPersonName"
-            android:text="Sistema de recuperação"
             android:textSize="24sp" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbtnAltimeter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
@@ -75,7 +75,7 @@
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnLaunchRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

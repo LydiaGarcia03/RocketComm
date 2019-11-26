@@ -36,7 +36,7 @@
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,6 +88,12 @@
 
             </LinearLayout>
         </RadioGroup>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/line_chart" >
+        </com.github.mikephil.charting.charts.LineChart>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

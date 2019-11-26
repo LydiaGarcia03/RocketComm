@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PresentationLayer.Rocket.RocketRegister"></activity>
@@ -19,6 +19,7 @@
         <activity android:name=".PresentationLayer.Rocket.RocketDetails"></activity>
         <activity android:name=".PresentationLayer.Launch.LaunchList"></activity>
         <activity android:name=".PresentationLayer.Launch.LaunchRegister"></activity>
+        <activity android:name=".PresentationLayer.Launch.Launching"></activity>
         <activity android:name=".PresentationLayer.Rocket.AdapterRocket"></activity>
         <activity android:name=".PresentationLayer.Launch.AdapterLaunch"></activity>
         <activity android:name=".PresentationLayer.Generic.Home">

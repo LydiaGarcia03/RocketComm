@@ -27,6 +27,14 @@ public class Rocket implements Serializable {
         this.stages = stages;
         this.rocket_description = rocket_description;
     }
+    public Rocket(String rocket_name, String creation_date, float rocket_height, float rocket_weight, int stages, String rocket_description) {
+        this.rocket_name = rocket_name;
+        this.creation_date = creation_date;
+        this.rocket_height = rocket_height;
+        this.rocket_weight = rocket_weight;
+        this.stages = stages;
+        this.rocket_description = rocket_description;
+    }
 
     public int getId() {
         return id;

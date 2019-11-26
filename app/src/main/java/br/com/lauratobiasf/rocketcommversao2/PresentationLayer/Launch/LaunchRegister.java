@@ -51,9 +51,7 @@ public class LaunchRegister extends AppCompatActivity
 
         String rocketChosen = spRocket.getSelectedItem().toString();
 
-        //launchDAO.db.execSQL("SELECT id FROM rockets WHERE rocket_name = " + rocketChosen);
-
-        launchDAO.insertLaunch(getApplicationContext(), 1, 1, etMotorType.getText().toString(), etRecoverSystem.getText().toString(), false);
+        launchDAO.insertLaunch(1, 1, etMotorType.getText().toString(), etRecoverSystem.getText().toString(), false);
 
     }
 }

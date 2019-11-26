@@ -21,7 +21,7 @@ public class LaunchList extends AppCompatActivity
     private ArrayList<Launch> launchList = new ArrayList<Launch>();
     Intent intent;
 
-    LaunchDAO _dal = new LaunchDAO();
+    LaunchDAO _dal;
 
 
     @Override
@@ -29,6 +29,8 @@ public class LaunchList extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_list);
         recycler = findViewById(R.id.launch_recycler);
+
+        _dal = new LaunchDAO(this);
 
         //Listagem de Lançamentos
 

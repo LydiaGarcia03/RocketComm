@@ -10,13 +10,11 @@ public class LaunchDAO {
 
     public SQLiteDatabase db;
 
-    public void initTable(Context c){
+    public LaunchDAO(Context c){
         db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE, null);
     }
 
-    public void createTable(Context c) {
-
-        initTable(c);
+    public void createTable() {
 
         db.execSQL("CREATE TABLE IF NOT EXISTS launches(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -29,9 +27,7 @@ public class LaunchDAO {
 
     }
 
-    public void insertLaunch(Context c, int fk_rocket_id, float launch_total_time, String motor_type, String recover_system, boolean altimeter){
-
-        initTable(c);
+    public void insertLaunch(int fk_rocket_id, float launch_total_time, String motor_type, String recover_system, boolean altimeter){
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("launches", fk_rocket_id);
@@ -44,9 +40,7 @@ public class LaunchDAO {
 
     }
 
-    public void deleteLaunch(Context c, Launch launch){
-
-        initTable(c);
+    public void deleteLaunch(Launch launch){
 
         //db.delete("launches", "id=?" + launch.getId(), null);
         db.execSQL("DELETE FROM launches WHERE id = " + launch.getId());

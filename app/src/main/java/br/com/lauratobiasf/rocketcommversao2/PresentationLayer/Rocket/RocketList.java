@@ -22,13 +22,15 @@ public class RocketList extends AppCompatActivity {
     private ArrayList<Rocket> rocketList = new ArrayList<Rocket>();
     Intent i;
 
-    RocketDAO _dal = new RocketDAO();
+    RocketDAO _dal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rocket_list);
         recyclerView = findViewById(R.id.rocket_recycler);
+
+        _dal = new RocketDAO(this);
 
         //Listagem de Foguetes
 

@@ -23,12 +23,6 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        rocketDAO = new RocketDAO();
-        rocketDAO.createTable(this);
-
-        launchDAO = new LaunchDAO();
-        launchDAO.createTable(this);
     }
 
     public void redirectToRocket(View view){
@@ -36,12 +30,18 @@ public class Home extends AppCompatActivity {
         i = new Intent(this, RocketList.class);
         startActivity(i);
 
+        rocketDAO = new RocketDAO(this);
+        rocketDAO.createTable();
+
     }
 
     public void redirectToLaunch(View view) {
 
         i = new Intent(this, LaunchList.class);
         startActivity(i);
+
+        launchDAO = new LaunchDAO(this);
+        launchDAO.createTable();
 
     }
 }

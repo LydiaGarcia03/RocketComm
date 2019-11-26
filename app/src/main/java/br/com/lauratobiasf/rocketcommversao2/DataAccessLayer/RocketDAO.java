@@ -12,13 +12,11 @@ public class RocketDAO {
 
     SQLiteDatabase db;
 
-    public void initDatabase(Context c){
+    public RocketDAO(Context c){
         db = c.openOrCreateDatabase("rocketcomm", c.MODE_PRIVATE,null);
     }
 
-    public void createTable(Context c){
-
-        initDatabase(c);
+    public void createTable(){
 
         db.execSQL("CREATE TABLE IF NOT EXISTS rockets(" +
                 "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -65,27 +63,22 @@ public class RocketDAO {
 
     }
 
-    public void insertRockets(Context c, String rocketname, String creationdate, Float height, Float weight, Integer stages, String desc){
-
-        initDatabase(c);
+    public void insert(Rocket rocket){
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put("rocket_name", rocketname);
-        contentValues.put("creation_date", creationdate);
-        contentValues.put("rocket_height", height);
-        contentValues.put("rocket_weight", weight);
-        contentValues.put("stages", stages);
-        contentValues.put("rocket_description", desc);
+        contentValues.put("rocket_name", rocket.getRocket_name());
+        contentValues.put("creation_date", rocket.getCreation_date());
+        contentValues.put("rocket_height", rocket.getRocket_height());
+        contentValues.put("rocket_weight", rocket.getRocket_weight());
+        contentValues.put("stages", rocket.getStages());
+        contentValues.put("rocket_desc", rocket.getRocket_description());
 
         db.insert("rockets", null, contentValues);
 
     }
 
-    public void deleteRocket(Context c, Rocket rocket){
+    public void deleteRocket(Rocket rocket){
 
-        initDatabase(c);
-
-        //db.delete("rockets", "id=?" + rocket.getId(), null);
         db.execSQL("DELETE FROM rockets WHERE id = " + rocket.getId());
 
     }

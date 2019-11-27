@@ -1,6 +1,8 @@
 package br.com.lauratobiasf.rocketcommversao2.DataObjectLayer;
 
-public class Launch {
+import java.io.Serializable;
+
+public class Launch implements Serializable {
 
     int id;
     String rocket_name;

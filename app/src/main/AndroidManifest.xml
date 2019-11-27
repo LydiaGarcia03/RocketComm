@@ -19,6 +19,7 @@
         <activity android:name=".PresentationLayer.Rocket.RocketDetails"></activity>
         <activity android:name=".PresentationLayer.Launch.LaunchList"></activity>
         <activity android:name=".PresentationLayer.Launch.LaunchRegister"></activity>
+        <activity android:name=".PresentationLayer.Launch.LaunchDetails"></activity>
         <activity android:name=".PresentationLayer.Launch.Launching"></activity>
         <activity android:name=".PresentationLayer.Rocket.AdapterRocket"></activity>
         <activity android:name=".PresentationLayer.Launch.AdapterLaunch"></activity>

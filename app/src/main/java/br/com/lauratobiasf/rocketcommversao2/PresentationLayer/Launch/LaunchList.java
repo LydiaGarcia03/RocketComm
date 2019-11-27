@@ -35,15 +35,6 @@ public class LaunchList extends AppCompatActivity
 
         launchList = _dal.getLaunches();
 
-//        launchList.add(new Launch("Lançamento 01"));
-//        launchList.add(new Launch("Lançamento 02"));
-//        launchList.add(new Launch("Lançamento 03"));
-//        launchList.add(new Launch("Lançamento 04"));
-//        launchList.add(new Launch("Lançamento 05"));
-//        launchList.add(new Launch("Lançamento 06"));
-//        launchList.add(new Launch("Lançamento 07"));
-//        launchList.add(new Launch("Lançamento 08"));
-
         //Configurar Adapter
 
         final AdapterLaunch adapterLaunch = new AdapterLaunch(launchList);
@@ -68,7 +59,7 @@ public class LaunchList extends AppCompatActivity
                                 Intent i = new Intent(getApplicationContext(), LaunchDetails.class);
 
                                 Launch launch = adapterLaunch.getLaunch(position);
-                                i.putExtra("launch", launch.getId());
+                                i.putExtra("launch", launch);
 
                                 startActivity(i);
                             }

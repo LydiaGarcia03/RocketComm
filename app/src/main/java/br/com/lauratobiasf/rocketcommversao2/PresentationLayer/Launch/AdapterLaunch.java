@@ -32,7 +32,7 @@ public class AdapterLaunch extends RecyclerView.Adapter<AdapterLaunch.LaunchView
     public void onBindViewHolder(LaunchViewHolder holder, int position)
     {
         Launch launch = launchList.get(position);
-        holder.launchID.setText(launch.getId());
+        holder.launchID.setText(Integer.toString(launch.getId()));
     }
 
     @Override
